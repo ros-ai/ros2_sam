@@ -1,14 +1,10 @@
 # ROS 2 SAM
-
 This package is what the name suggests: Meta's `segment-anything` wrapped in a ROS 2 node. In this wrapper we offer...
 
  - ROS 2 services for segmenting images using point and box queries.
- - An RQT interface for specifying point queries interactively.
  - A Python client which handles the serialization of queries.
 
-
 ## Installation
-
 Installation is easy: 
  1. Start by cloning this package into your ROS 2 environment and build via:
 
@@ -18,9 +14,7 @@ colcon build --symlink-install
 
  2. Install SAM by running `pip install git+https://github.com/facebookresearch/segment-anything.git`.
 
-
 ## Using ROS 2 SAM standalone
-
 Run the SAM ROS 2 node using:
 
 ```bash
@@ -40,7 +34,6 @@ You can test SAM by starting the node and then running `ros2 run ros2_sam sam_cl
 
 
 ### ROS 2 Services
-
 `ros2_sam` offers a single service `~/segment` of the type `ros2_sam_msgs/srv/Segmentation`. The service definition is
 
 ```
@@ -66,7 +59,6 @@ The service calls are wrapped up conveniently in the ROS 2 SAM client.
 
 
 ## Using ROS 2 SAM Client
-
 Alternatively, if you don't feel like assembling the service calls yourself, one can use the ROS 2 SAM client instead of the service calls.
 
 Initialize the client with the service name of the SAM segmentation service
