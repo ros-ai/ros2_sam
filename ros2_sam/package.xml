@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>ros2_sam</name>
+  <version>1.0.0</version>
+  <description>ROS 2 wrapper for Meta's Segment-Anything model.</description>
+  <maintainer email="aroefer@cs.uni-freiburg.de">Adrian Röfer</maintainer>
+  <maintainer email="martin.huber@kcl.ac.uk">mhubii</maintainer>
+  <license>GNU</license>
+
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>ros2_sam_msgs</exec_depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
