@@ -40,6 +40,9 @@ class SAM:
 
     def segment(self, img, points, point_labels, boxes=None, multimask=True):
         self._predictor.set_image(img)
+        if len(points) == 0:
+            points = None
+            point_labels = None
         return self._predictor.predict(
             point_coords=points,
             point_labels=point_labels,
